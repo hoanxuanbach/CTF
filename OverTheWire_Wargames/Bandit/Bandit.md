@@ -305,8 +305,35 @@ EeoULMCra2q0dSkYj561DX7s1CpBuOBt
 
 # Bandit 21
 
+A program is running automatically at regular intervals from cron, the time-based job scheduler. Look in /etc/cron.d/ for the configuration and see what command is being executed.
+
+First, we look at what is in the /etc/cron.d/ and we see the cronjob_bandit22.
+
 ![alt text](image-37.png)
+
+This cronjob runs /usr/bin/cronjob_bandit22.sh file as bandit22 user. 
+
+In the bash file, the file creates a file in tmp and gives read permission to everyone(last 4). Then it copies the input of bandit22 password file into the new file. 
 
 ![alt text](image-36.png)
 
 tRae0UfB9v0UzbCdn9cY0gQnds9GF58Q
+
+# Bandit 22
+
+We do the same as previous level. 
+
+![alt text](image-38.png)
+
+The script will be run as bandit23 so myname = 'bandit23'
+
+Then it takes the string 'I am user bandit23' and computes its MD5 hash to 'mytarget'.
+
+The final line is the same as previous level so just 'cat' it.
+
+![alt text](image-39.png)
+
+0Zf11ioIjMVN551jX3CmStKLYqjk54Ga
+
+# Bandit 23
+
